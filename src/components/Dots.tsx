@@ -1,8 +1,4 @@
-import React, {useState} from 'react'
-import { convertCompilerOptionsFromJson } from 'typescript'
-import p1 from './p1.svg'
-import p2 from './p2.svg'
-import whiteCircle from './whiteCircle.svg'
+import whiteCircle from '../assets/images/whiteCircle.svg'
 type Props = {
   id : string
   fun : Function
@@ -12,7 +8,6 @@ type Props = {
 
 const Dots = (props: Props) => {
 
-  const [bg, setbg] = useState<string>()
 
   return (
     <span

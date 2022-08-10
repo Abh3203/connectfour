@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../index.css";
-import p1 from "./p1.svg"
-import p2 from "./p2.svg"
+import p1 from "../assets/images/player1default.svg"
+import p2 from "../assets/images/player2default.svg"
 type Props = {};
 
 const Start = (props: Props) => {
