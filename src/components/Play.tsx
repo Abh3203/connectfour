@@ -118,6 +118,17 @@ const Play = (props: Props) => {
 
   useEffect(()=>{
     localStorage.setItem("counter", JSON.stringify(counter))
+    if (counter === 64 && gameRunning) {
+      console.log("draw")
+      if (noOfGames === gameNumber) {
+        checkTourWinner();
+        return;
+      }
+      setWInStatement(
+        `Game Draw`
+      );
+      setGameRunning(false);
+    }
   }, [counter])
 
   useEffect(()=>{
@@ -294,17 +305,7 @@ const Play = (props: Props) => {
         break;
       }
     }
-    if (counter === 63) {
-      console.log("draw")
-      if (noOfGames === gameNumber) {
-        checkTourWinner();
-        return;
-      }
-      setWInStatement(
-        `Game Draw`
-      );
-      setGameRunning(false);
-    }
+    
   };
 
   return (
